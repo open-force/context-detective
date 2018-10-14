@@ -29,6 +29,9 @@ global with sharing class ContextDetective implements Schedulable, Database.Batc
 		// run a queueable
 		System.enqueueJob(new ContextDetectiveQueueable('Queueable'));
 
+		// run a queueable that allows callouts
+		System.enqueueJob(new ContextDetectiveCalloutQueueable('Queueable w/ Callouts'));
+
 		// schedule this class
 		Datetime nextRun = System.now().addMinutes(1);
 		String cron = '0 ' + nextRun.minute() + ' ' + nextRun.hour() + ' ' + nextRun.day() + ' ' + nextRun.month() + ' ? ' + nextRun.year();
@@ -72,7 +75,7 @@ global with sharing class ContextDetective implements Schedulable, Database.Batc
 	public void execute(Database.BatchableContext bc, List<Object> records) {
 		dumpContext(contextDescription + '.execute()');
 
-		System.enqueueJob(new ContextDetectiveQueueable('Queueable from inside a Batch'));
+		System.enqueueJob(new ContextDetectiveCalloutQueueable('Callout Queueable inside a Batch'));
 	}
 
 	public void finish(Database.BatchableContext bc) {
