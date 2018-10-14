@@ -43,6 +43,9 @@ global with sharing class ContextDetective implements Schedulable, Database.Batc
 		// fire a platform event
 		EventBus.publish(new Sidekick__e());
 
+		// cause a normal trigger to fire
+		insert new Account(Name='Context Detective');
+
 		// dump the context we were called from
 		dumpContext(description);
 	}
