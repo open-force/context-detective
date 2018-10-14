@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Queueable__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>True if a queueable Apex job invoked the executing code. Returns false if not, including if a batch Apex job or a future method invoked the code.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>True if a queueable Apex job invoked the executing code. Returns false if not, including if a batch Apex job or a future method invoked the code.</inlineHelpText>
+    <label>Queueable</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

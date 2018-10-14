@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Future__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>True if the currently executing code is invoked by code contained in a method annotated with future; false otherwise.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>True if the currently executing code is invoked by code contained in a method annotated with future; false otherwise.</inlineHelpText>
+    <label>Future</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>
