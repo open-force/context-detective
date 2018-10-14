@@ -1,4 +1,4 @@
-# Context Limits #
+# Context Detective #
 
 This is a simple bit of Apex, paired with a custom object, that will help you explore the various limits that are applied by Salesforce in different execution contexts where Apex can run.
 
